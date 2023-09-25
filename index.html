@@ -302,7 +302,25 @@
                     mainContent.style.display = "block";
                 }, 1000); // 1000ms (1 second) delay after fading out
             }, 3000); // 3000ms (3 seconds) delay before fading out
-        });
+
+            var video = document.getElementById("video");
+            var image = document.getElementById("image");
+
+            video.addEventListener("ended", function() {
+                // When the video ends, hide the video and fade in the image
+                video.style.transition = "opacity 1s";
+                video.style.opacity = "0";
+
+                setTimeout(function() {
+                    video.style.display = "none";
+                    image.style.transition = "opacity 1s";
+                    image.style.opacity = "1"; // Fade in the image
+                }, 1000); // 1000ms (1 second) delay after hiding the video container
+            });
+        }, 1000); // 1000ms (1 second) delay after fading out
+    }, 3000); // 3000ms (3 seconds) delay before fading out
+       
+    });
 
     </script>
 </body>
