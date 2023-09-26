@@ -272,6 +272,21 @@ Official Code
             var image = document.getElementById("image");
             var videoContainer = document.getElementById("video-container");
 
+              // Get the image element
+    var image = document.getElementById("image");
+
+    // Add a click event listener to the image only for specific media queries
+    if (window.innerWidth <= 600) {
+        image.style.cursor = "pointer"; // Change the cursor to a pointer
+        image.addEventListener("click", toggleImage);
+    }
+
+    function toggleImage() {
+        // Toggle between BK1.png and BK2.png
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        image.src = images[currentImageIndex];
+    }
+
             // Hide the video container
             videoContainer.style.transition = "opacity 1s";
             videoContainer.style.opacity = "0";
