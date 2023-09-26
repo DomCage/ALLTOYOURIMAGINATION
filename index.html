@@ -180,8 +180,14 @@
             font-style: italic;
         }
 
-        .clickable-image {
+        #next-image {
+            position: absolute;
+            top: 35%;
+            right: 2.5%;
+            font-size: 15px;
             cursor: pointer;
+            opacity: 0; /* Initially hide the arrow button */
+            transition: opacity 1s; /* Add opacity transition for the button */
         }
 
         #loading-screen {
@@ -204,6 +210,18 @@
         #main-content {
             display: none;    
         }
+
+    @media (max-width: 390px) {
+    #next-image {
+            position: absolute;
+            top: 35%;
+            right: -35px;
+            font-size: 15px;
+            cursor: pointer;
+            opacity: 0; /* Initially hide the arrow button */
+            transition: opacity 1s; /* Add opacity transition for the button */
+    }
+     
 }
 
 
@@ -246,15 +264,6 @@
 
         function toggleImage() {
             var image = document.getElementById("image");
-            var videoContainer = document.getElementById("video-container");
-
-             // Get the image element
-        var image = document.getElementById("image");
-
-        // Add a click event listener to the image
-        image.addEventListener("click", toggleImage);
-
-        function toggleImage() {
             var videoContainer = document.getElementById("video-container");
 
             // Hide the video container
