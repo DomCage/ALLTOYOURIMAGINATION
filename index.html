@@ -210,6 +210,17 @@
         #main-content {
             display: none;    
         }
+
+    @media (max-width: 375px) {
+    #next-image {
+            position: absolute;
+            top: 35%;
+            right: -35px;
+            font-size: 15px;
+            cursor: pointer;
+            opacity: 0; /* Initially hide the arrow button */
+            transition: opacity 1s; /* Add opacity transition for the button */
+    }
      
 }
 
