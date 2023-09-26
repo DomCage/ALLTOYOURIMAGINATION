@@ -34,8 +34,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 1s; /* Add opacity transition for the image */
-            opacity: 0; /* Initially hide the image */
+            transition: opacity 1s; 
+            opacity: 0; 
         }
 
         #video-container {
@@ -82,8 +82,8 @@
             right: 880px;
             font-size: 15px;
             cursor: pointer;
-            opacity: 0; /* Initially hide the arrow button */
-            transition: opacity 1s; /* Add opacity transition for the button */
+            opacity: 0; 
+            transition: opacity 1s; 
         }
 
         #loading-screen {
@@ -139,8 +139,8 @@
             width: 70%;
             height: 70%;
             object-fit: cover;
-            transition: opacity 1s; /* Add opacity transition for the image */
-            opacity: 0; /* Initially hide the image */
+            transition: opacity 1s; 
+            opacity: 0; 
         }
 
         #video-container {
@@ -162,11 +162,11 @@
         }
 
         #content {
-            position: absolute; /* Use absolute positioning */
-            bottom: 0; /* Anchor it to the bottom of #video-container */
+            position: absolute; 
+            bottom: 0; 
             width: 350px;
             margin-top: -140px;
-            padding: 0; /* Remove padding */
+            padding: 0; 
             text-align: justify;
         }
 
@@ -186,8 +186,8 @@
             right: 2.5%;
             font-size: 15px;
             cursor: pointer;
-            opacity: 0; /* Initially hide the arrow button */
-            transition: opacity 1s; /* Add opacity transition for the button */
+            opacity: 0; 
+            transition: opacity 1s; 
         }
 
         #loading-screen {
@@ -218,8 +218,8 @@
             right: -35px;
             font-size: 15px;
             cursor: pointer;
-            opacity: 0; /* Initially hide the arrow button */
-            transition: opacity 1s; /* Add opacity transition for the button */
+            opacity: 0; 
+            transition: opacity 1s; 
     }
      
 }
@@ -259,14 +259,14 @@
     </div>
 
     <script>
-        var images = ["BK1.png", "BK2.png"]; // Add your image URLs here
+        var images = ["BK1.png", "BK2.png"]; 
         var currentImageIndex = 0;
 
         function toggleImage() {
             var image = document.getElementById("image");
             var videoContainer = document.getElementById("video-container");
 
-            // Hide the video container
+            
             videoContainer.style.transition = "opacity 1s";
             videoContainer.style.opacity = "0";
 
@@ -274,18 +274,18 @@
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 image.src = images[currentImageIndex];
 
-                // Gradually fade in the image
+                
                 setTimeout(function () {
                     image.style.transition = "opacity 1s";
                     image.style.opacity = "1";
-                }, 1000); // 1000ms (1 second) delay before fading in the image
-            }, 1000); // 1000ms (1 second) delay before hiding the video container
+                }, 1000); 
+            }, 1000); 
         }
 
         function fadeInImage() {
             var image = document.getElementById("image");
 
-            // Fade in the image
+            
             image.style.transition = "opacity 1s";
             image.style.opacity = "1";
         }
@@ -300,24 +300,24 @@
                 video.style.display = "none";
                 var nextImageButton = document.getElementById("next-image");
                 nextImageButton.style.transition = "opacity 1s";
-                nextImageButton.style.opacity = "1"; // Fade in the arrow button
-            }, 1000); // 1000ms (1 second) delay before hiding the video container
+                nextImageButton.style.opacity = "1"; 
+            }, 1000); 
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            // Delay for 3 seconds (3000ms) before fading out the loading screen
+            
             setTimeout(function() {
                 var loadingScreen = document.getElementById("loading-screen");
                 loadingScreen.style.transition = "opacity 1s";
                 loadingScreen.style.opacity = "0";
 
-                // After fading out, hide the loading screen and show the main content
+                
                 setTimeout(function() {
                     loadingScreen.style.display = "none";
                     var mainContent = document.getElementById("main-content");
                     mainContent.style.display = "block";
-                }, 1000); // 1000ms (1 second) delay after fading out
-            }, 3000); // 3000ms (3 seconds) delay before fading out
+                }, 1000); 
+            }, 3000); 
         });
 
     </script>
