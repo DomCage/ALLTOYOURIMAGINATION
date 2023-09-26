@@ -211,27 +211,17 @@
             display: none;    
         }
 
-    @media (min-width: 375px) {
+  @media (min-width: 375px) and (max-width: 400px)  {
     #next-image {
+            position: absolute;
             top: 35%;
             right: -30px;
-            
+            font-size: 15px;
+            cursor: pointer;
+            opacity: 0; /* Initially hide the arrow button */
+            transition: opacity 1s; /* Add opacity transition for the button */
     }
-}
 
-    @media (min-width: 390px) {
-    #next-image {
-        top: 35%;
-        right: -25px;
-    }
-}
-
-    @media (min-width: 360px) {
-    #next-image {
-            top: 35%;
-            right: -30px;
-    }
-    
 }
 
 
